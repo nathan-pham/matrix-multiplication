@@ -59,4 +59,6 @@ void setup() {
   printM(projection);
   printM(point);
   printM(result);
+  
+  println(matrixToVector(result));
 }
