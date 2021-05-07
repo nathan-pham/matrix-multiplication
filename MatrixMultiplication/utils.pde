@@ -4,5 +4,5 @@ float[][] vectorToMatrix(PVector v) {
 }
 
 PVector matrixtoVector(float[][] m) {
-  return new PVector(m[0][0], m[1][0], m[2][0]);
+  return new PVector(m[0][0], m[1][0], m.length > 2 ? m[2][0] : 0);
 }

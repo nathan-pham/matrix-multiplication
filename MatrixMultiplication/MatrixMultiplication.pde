@@ -3,11 +3,7 @@ float[][] projection = {
   {0, 1, 0}
 };
 
-float[][] point = {
-  {100}, 
-  {75}, 
-  {50}
-};
+float[][] point = vectorToMatrix(new PVector(100, 75, 50));
 
 float[][] matMul(float[][] matrixA, float[][] matrixB) {
   int colA = matrixA[0].length;
