@@ -41,15 +41,15 @@ float[][] matMul(float[][] matrixA, float[][] matrixB) {
   return result;
 }
 
-void printM(float[][] matrix) {
-  int col = matrix[0].length;
-  int row = matrix.length;
+void printM(float[][] m) {
+  int col = m[0].length;
+  int row = m.length;
   
   println(String.format("%s x %s", row, col));
   
   for(int i = 0; i < row; i++) {
     for(int j = 0; j < col; j++) {
-      print(matrix[i][j] + " ");  
+      print(m[i][j] + " ");  
     }
     println();
   }
@@ -59,8 +59,8 @@ void printM(float[][] matrix) {
 
 void setup() {
   float[][] result = matMul(projection, point);
+  
   printM(projection);
   printM(point);
   printM(result);
-  
 }
