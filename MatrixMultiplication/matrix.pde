@@ -1,4 +1,9 @@
-float[][] matMul(float[][] matrixA, float[][] matrixB) {
+PVector matMul(float[][] matrixA, PVector v) {
+  float[][] matrixB = vectorToMatrix(v);
+  return matrixToVector(_matMul(matrixA, matrixB));
+}
+
+float[][] _matMul(float[][] matrixA, float[][] matrixB) {
   int colA = matrixA[0].length;
   int rowA = matrixA.length;
   

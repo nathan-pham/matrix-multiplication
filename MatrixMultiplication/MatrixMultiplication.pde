@@ -26,13 +26,14 @@ void draw() {
   strokeWeight(4);
   
   float[][] rotationMatrix = {
-    {cos(angle), -sin(angle)},
-    {sin(angle),  cos(angle)}
+    {cos(angle), -sin(angle), 0},
+    {sin(angle),  cos(angle), 0},
+    {0, 0, 1}
   };
   
   for(PVector v : points) {
-    float[][] projected = matMul(projection, vectorToMatrix(v));
-    PVector rotated = matrixToVector(matMul(rotationMatrix, projected));
+    PVector projected = matMul(projection, v);
+    PVector rotated = matMul(rotationMatrix, projected);
     
     point(rotated.x, rotated.y);
   }
